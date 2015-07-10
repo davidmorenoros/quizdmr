@@ -6,9 +6,9 @@ exports.question = function(req,res){
 
 exports.answer = function(req,res){
   if(req.query.respuesta === 'Roma'){
-	res.render('./quizes/answer', { respuesta: 'Correcta' });
+	res.render('./quizes/answer', { respuesta: 'Respuesta correcta' });
   }
   else{
-	res.render('./quizes/answer', { respuesta: 'Incorrecta' });
+	res.render('./quizes/answer', { respuesta: 'Respuesta incorrecta' });
   }
 };
