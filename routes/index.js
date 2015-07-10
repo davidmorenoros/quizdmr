@@ -18,4 +18,12 @@ router.get('/quizes/question', quizController.question);
   res.render('./quizes/answer', { title: 'Answer - QuizDMR'});
 });*/
 router.get('/quizes/answer', quizController.answer);
+
+/* Credits page. */
+router.get('/author', function(req,res){
+  res.render('./author', { title: 'Credits'});
+});
+
+
+
 module.exports = router;
