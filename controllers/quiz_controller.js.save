@@ -1,0 +1,18 @@
+/* GET quizes question page. */
+exports.question = function(req,res){
+  res.render('./quizes/question',{ question: '¿Cúal es la capital de Italia?'
+
+}
+
+
+
+/*router.get('/quizes/question', function(req,res){
+  res.render('./quizes/question',{ title: 'Question - QuizDMR' });
+});*/
+router.get('/quizes/question', quizController.question);
+
+/* GET quizes answer page. */
+/*router.get('/answer', function(req,res){
+  res.render('./quizes/answer', { title: 'Answer - QuizDMR'});
+});*/
+
