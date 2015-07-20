@@ -3,7 +3,7 @@
 var path = require('path');
 
 // Postgres DATABASE_URL = postgres://user:passwd@host:port/database
-// Postgres DATABASE_URL = sqlite://:@:/
+// SQLite DATABASE_URL = sqlite://:@:/
 
 var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
 var DB_name = (url[6]||null);
@@ -31,7 +31,7 @@ var sequelize = new Sequelize(DB_name, user, pwd,
 							 protocol:protocol, 
 							 port:port,
 							 host:host,
-							 storage:storage, // Sólo SQLite .env
+							 //storage:storage, // Sólo SQLite .env
 							 omitNULL:true		// Sólo Postgres
 							}
 					);
@@ -65,13 +65,13 @@ sequelize.sync().success(function(){
 // sequelize.sync() crea e inicializa tabla de preguntas en DB
 sequelize.sync().then(function(){
 //then(..) ejecuta el manejador una vez creada la tabla
-	Quiz.count().success(function(){
+	Quiz.count().then(function(count){
 		if(count === 0){ // La tabla se inicializa solo si está vacía
 			Quiz.create({
 				pregunta: 'Capital de Italia',
 				respuesta: 'Roma'
 			})
-			.success(function(){console.log('Base de datos inicializada')});
+			.then(function(){console.log('Base de datos inicializada')});
 
 		};
 	});

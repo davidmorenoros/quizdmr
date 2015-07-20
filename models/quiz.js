@@ -3,6 +3,6 @@
 module.exports = function(sequelize, DataTypes){
 	return sequelize.define('Quiz', 		// Nombre de la tabla/objetos
 		{ pregunta: DataTypes.STRING,		// Campo de la tabla
-			respuesta: DataTypes.STRING,	// Campo de la tabla
+			respuesta: DataTypes.STRING	// Campo de la tabla
 	});
 }

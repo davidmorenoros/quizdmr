@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/images')));
 
 // DMR: Instalamos el middleware que da soporte a las vistas parciales.
-app.use(partials()),
+app.use(partials());
 
 app.use('/', routes);
 // DMR: Eliminamos el enrutador users.
