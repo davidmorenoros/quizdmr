@@ -1,101 +1,101 @@
-2015-07-20T15:34:12.974789+00:00 app[web.1]:     at Module._compile (module.js:456:26)
-2015-07-20T15:34:12.974791+00:00 app[web.1]:     at Module.load (module.js:356:32)
-2015-07-20T15:34:12.974792+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
-2015-07-20T15:34:12.974793+00:00 app[web.1]:     at Module.require (module.js:364:17)
-2015-07-20T15:34:12.974795+00:00 app[web.1]:     at require (module.js:380:17)
-2015-07-20T15:34:12.974796+00:00 app[web.1]:     at Object.<anonymous> (/app/controllers/quiz_controller.js:23:14)
-2015-07-20T15:34:12.974798+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
-2015-07-20T15:34:12.974797+00:00 app[web.1]:     at Module._compile (module.js:456:26)
-2015-07-20T15:34:12.974801+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
-2015-07-20T15:34:12.974799+00:00 app[web.1]:     at Module.load (module.js:356:32)
-2015-07-20T15:34:12.974803+00:00 app[web.1]:     at require (module.js:380:17)
-2015-07-20T15:34:12.974802+00:00 app[web.1]:     at Module.require (module.js:364:17)
-2015-07-20T15:34:12.974804+00:00 app[web.1]:     at Object.<anonymous> (/app/routes/index.js:3:22)
-2015-07-20T15:34:13.904385+00:00 heroku[web.1]: Process exited with status 8
-2015-07-20T15:34:13.924721+00:00 heroku[web.1]: State changed from starting to crashed
-2015-07-20T15:34:13.925861+00:00 heroku[web.1]: State changed from crashed to starting
-2015-07-20T15:34:16.529786+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
-2015-07-20T15:34:18.081625+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
-2015-07-20T15:34:18.081648+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
-2015-07-20T15:34:18.515419+00:00 app[web.1]: 
-2015-07-20T15:34:18.515547+00:00 app[web.1]: /app/node_modules/sequelize/lib/sequelize.js:182
-2015-07-20T15:34:18.515804+00:00 app[web.1]:     throw new Error('The dialect ' + this.getDialect() + ' is not supported. (
-2015-07-20T15:34:18.515816+00:00 app[web.1]:           ^
-2015-07-20T15:34:18.516531+00:00 app[web.1]: Error: The dialect postgres is not supported. (Error: Cannot find module 'pg-hstore')
-2015-07-20T15:34:18.516533+00:00 app[web.1]:     at new Sequelize (/app/node_modules/sequelize/lib/sequelize.js:182:11)
-2015-07-20T15:34:18.516535+00:00 app[web.1]:     at Object.<anonymous> (/app/models/models.js:29:17)
-2015-07-20T15:34:18.516536+00:00 app[web.1]:     at Module._compile (module.js:456:26)
-2015-07-20T15:34:18.516537+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
-2015-07-20T15:34:18.516538+00:00 app[web.1]:     at Module.load (module.js:356:32)
-2015-07-20T15:34:18.516540+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
-2015-07-20T15:34:18.516541+00:00 app[web.1]:     at Module.require (module.js:364:17)
-2015-07-20T15:34:18.516542+00:00 app[web.1]:     at require (module.js:380:17)
-2015-07-20T15:34:18.516543+00:00 app[web.1]:     at Object.<anonymous> (/app/controllers/quiz_controller.js:23:14)
-2015-07-20T15:34:18.516545+00:00 app[web.1]:     at Module._compile (module.js:456:26)
-2015-07-20T15:34:18.516546+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
-2015-07-20T15:34:18.516547+00:00 app[web.1]:     at Module.load (module.js:356:32)
-2015-07-20T15:34:18.516548+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
-2015-07-20T15:34:18.516549+00:00 app[web.1]:     at Module.require (module.js:364:17)
-2015-07-20T15:34:18.516550+00:00 app[web.1]:     at require (module.js:380:17)
-2015-07-20T15:34:18.516552+00:00 app[web.1]:     at Object.<anonymous> (/app/routes/index.js:3:22)
-2015-07-20T15:34:19.307785+00:00 heroku[web.1]: State changed from starting to crashed
-2015-07-20T15:34:19.294426+00:00 heroku[web.1]: Process exited with status 8
-2015-07-20T15:40:45.285826+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quizdmr.herokuapp.com request_id=3b148153-5cdf-40b8-801f-8f6681187cb3 fwd="79.157.33.189" dyno= connect= service= status=503 bytes=
-2015-07-20T15:45:36.768256+00:00 heroku[web.1]: State changed from crashed to starting
-2015-07-20T15:45:38.829346+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
-2015-07-20T15:45:40.729041+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
-2015-07-20T15:45:40.728915+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
-2015-07-20T15:45:41.360784+00:00 app[web.1]: /app/node_modules/sequelize/lib/sequelize.js:182
-2015-07-20T15:45:41.360491+00:00 app[web.1]: 
-2015-07-20T15:45:41.361206+00:00 app[web.1]:     throw new Error('The dialect ' + this.getDialect() + ' is not supported. (
-2015-07-20T15:45:41.361395+00:00 app[web.1]:           ^
-2015-07-20T15:45:41.362328+00:00 app[web.1]: Error: The dialect postgres is not supported. (Error: Cannot find module 'pg-hstore')
-2015-07-20T15:45:41.362330+00:00 app[web.1]:     at new Sequelize (/app/node_modules/sequelize/lib/sequelize.js:182:11)
-2015-07-20T15:45:41.362332+00:00 app[web.1]:     at Object.<anonymous> (/app/models/models.js:29:17)
-2015-07-20T15:45:41.362333+00:00 app[web.1]:     at Module._compile (module.js:456:26)
-2015-07-20T15:45:41.362335+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
-2015-07-20T15:45:41.362339+00:00 app[web.1]:     at require (module.js:380:17)
-2015-07-20T15:45:41.362340+00:00 app[web.1]:     at Object.<anonymous> (/app/controllers/quiz_controller.js:23:14)
-2015-07-20T15:45:41.362342+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
-2015-07-20T15:45:41.362338+00:00 app[web.1]:     at Module.require (module.js:364:17)
-2015-07-20T15:45:41.362337+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
-2015-07-20T15:45:41.362336+00:00 app[web.1]:     at Module.load (module.js:356:32)
-2015-07-20T15:45:41.362345+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
-2015-07-20T15:45:41.362346+00:00 app[web.1]:     at Module.require (module.js:364:17)
-2015-07-20T15:45:41.362344+00:00 app[web.1]:     at Module.load (module.js:356:32)
-2015-07-20T15:45:41.362341+00:00 app[web.1]:     at Module._compile (module.js:456:26)
-2015-07-20T15:45:41.362348+00:00 app[web.1]:     at Object.<anonymous> (/app/routes/index.js:3:22)
-2015-07-20T15:45:41.362347+00:00 app[web.1]:     at require (module.js:380:17)
-2015-07-20T15:45:42.244016+00:00 heroku[web.1]: State changed from starting to crashed
-2015-07-20T15:45:42.245284+00:00 heroku[web.1]: State changed from crashed to starting
-2015-07-20T15:45:42.232459+00:00 heroku[web.1]: Process exited with status 8
-2015-07-20T15:45:45.072309+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
-2015-07-20T15:45:47.351915+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
-2015-07-20T15:45:47.351939+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
-2015-07-20T15:45:47.858509+00:00 app[web.1]: 
-2015-07-20T15:45:47.858609+00:00 app[web.1]: /app/node_modules/sequelize/lib/sequelize.js:182
-2015-07-20T15:45:47.858938+00:00 app[web.1]:     throw new Error('The dialect ' + this.getDialect() + ' is not supported. (
-2015-07-20T15:45:47.859118+00:00 app[web.1]:           ^
-2015-07-20T15:45:47.859947+00:00 app[web.1]: Error: The dialect postgres is not supported. (Error: Cannot find module 'pg-hstore')
-2015-07-20T15:45:47.859950+00:00 app[web.1]:     at new Sequelize (/app/node_modules/sequelize/lib/sequelize.js:182:11)
-2015-07-20T15:45:47.859951+00:00 app[web.1]:     at Object.<anonymous> (/app/models/models.js:29:17)
-2015-07-20T15:45:47.859953+00:00 app[web.1]:     at Module._compile (module.js:456:26)
-2015-07-20T15:45:47.859954+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
-2015-07-20T15:45:47.859956+00:00 app[web.1]:     at Module.load (module.js:356:32)
-2015-07-20T15:45:47.859957+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
-2015-07-20T15:45:47.859959+00:00 app[web.1]:     at Module.require (module.js:364:17)
-2015-07-20T15:45:47.859960+00:00 app[web.1]:     at require (module.js:380:17)
-2015-07-20T15:45:47.859961+00:00 app[web.1]:     at Object.<anonymous> (/app/controllers/quiz_controller.js:23:14)
-2015-07-20T15:45:47.859963+00:00 app[web.1]:     at Module._compile (module.js:456:26)
-2015-07-20T15:45:47.859964+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
-2015-07-20T15:45:47.859965+00:00 app[web.1]:     at Module.load (module.js:356:32)
-2015-07-20T15:45:47.859967+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
-2015-07-20T15:45:47.859968+00:00 app[web.1]:     at Module.require (module.js:364:17)
-2015-07-20T15:45:47.859969+00:00 app[web.1]:     at require (module.js:380:17)
-2015-07-20T15:45:47.859971+00:00 app[web.1]:     at Object.<anonymous> (/app/routes/index.js:3:22)
-2015-07-20T15:45:48.685402+00:00 heroku[web.1]: Process exited with status 8
-2015-07-20T15:45:48.697209+00:00 heroku[web.1]: State changed from starting to crashed
-2015-07-20T15:45:51.472728+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quizdmr.herokuapp.com request_id=ec8b10f2-8e65-495e-b35e-208bafd7343f fwd="79.157.33.189" dyno= connect= service= status=503 bytes=
-2015-07-20T15:56:59.883484+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quizdmr.herokuapp.com request_id=99b45b51-25d1-4ff0-b0dd-eb625af3ab04 fwd="79.157.33.189" dyno= connect= service= status=503 bytes=
-2015-07-20T15:57:03.393401+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quizdmr.herokuapp.com request_id=b05dfbdd-6726-4158-85ed-bfb4059104e9 fwd="79.157.33.189" dyno= connect= service= status=503 bytes=
-2015-07-20T16:04:48.767818+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=quizdmr.herokuapp.com request_id=9ee2f77e-f70c-4ec1-baf1-ae76b3c6e0e6 fwd="79.157.33.189" dyno= connect= service= status=503 bytes=
+2015-07-24T13:14:29.785083+00:00 app[web.1]: Executing (default): SELECT "id", "pregunta", "respuesta", "createdAt", "updatedAt" FROM "Quizzes" AS "Quiz" WHERE pregunta like '%';
+2015-07-24T13:14:43.353379+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/quizes" host=quizdmr.herokuapp.com request_id=024f1a1a-13c4-4fb4-a492-09c5508786a1 fwd="83.37.111.98" dyno=web.1 connect=1ms service=30000ms status=503 bytes=0
+2015-07-24T13:14:43.358668+00:00 app[web.1]: [0mGET /quizes [32m- [0m- ms - -[0m
+2015-07-24T13:14:49.423379+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/quizes" host=quizdmr.herokuapp.com request_id=65cd8879-750d-4b47-8f49-c1f7de7bb676 fwd="83.37.111.98" dyno=web.1 connect=2ms service=30001ms status=503 bytes=0
+2015-07-24T13:14:49.426456+00:00 app[web.1]: [0mGET /quizes [32m- [0m- ms - -[0m
+2015-07-24T13:14:59.782398+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/quizes" host=quizdmr.herokuapp.com request_id=50407de1-3b71-4cfe-b28d-05541fa8ac2b fwd="83.37.111.98" dyno=web.1 connect=3ms service=30001ms status=503 bytes=0
+2015-07-24T13:14:59.785018+00:00 app[web.1]: [0mGET /quizes [32m- [0m- ms - -[0m
+2015-07-24T13:15:03.459041+00:00 heroku[router]: at=info method=GET path="/" host=quizdmr.herokuapp.com request_id=d6728fcf-8341-49eb-9ca9-2695e579133a fwd="83.37.111.98" dyno=web.1 connect=1ms service=4ms status=304 bytes=144
+2015-07-24T13:15:03.458276+00:00 app[web.1]: [0mGET / [36m304 [0m1.775 ms - -[0m
+2015-07-24T13:15:03.684756+00:00 app[web.1]: [0mGET /stylesheets/smartphone.css [36m304 [0m0.796 ms - -[0m
+2015-07-24T13:15:03.599737+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=quizdmr.herokuapp.com request_id=a2e35243-bd6d-484f-93f8-89baae3dcbda fwd="83.37.111.98" dyno=web.1 connect=0ms service=4ms status=304 bytes=234
+2015-07-24T13:15:03.599734+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m1.923 ms - -[0m
+2015-07-24T13:15:03.688694+00:00 heroku[router]: at=info method=GET path="/stylesheets/smartphone.css" host=quizdmr.herokuapp.com request_id=cadf3fcf-478d-4c5c-95ad-fe689e941dd1 fwd="83.37.111.98" dyno=web.1 connect=2ms service=4ms status=304 bytes=233
+2015-07-24T13:15:05.353302+00:00 app[web.1]: req.query.search: undefined
+2015-07-24T13:15:05.372397+00:00 app[web.1]: Unhandled rejection ReferenceError: next is not defined
+2015-07-24T13:15:05.372401+00:00 app[web.1]:     at null.<anonymous> (/app/controllers/quiz_controller.js:107:29)
+2015-07-24T13:15:05.372404+00:00 app[web.1]:     at tryCatcher (/app/node_modules/sequelize/node_modules/bluebird/js/main/util.js:26:23)
+2015-07-24T13:15:05.372406+00:00 app[web.1]:     at Promise._settlePromiseFromHandler (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:489:31)
+2015-07-24T13:15:05.372409+00:00 app[web.1]:     at Promise._settlePromiseAt (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:565:18)
+2015-07-24T13:15:05.372411+00:00 app[web.1]:     at Promise._settlePromises (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:681:14)
+2015-07-24T13:15:05.372413+00:00 app[web.1]:     at Async._drainQueue (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:123:16)
+2015-07-24T13:15:05.372417+00:00 app[web.1]:     at Async.drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:15:14)
+2015-07-24T13:15:05.372419+00:00 app[web.1]:     at process._tickCallback (node.js:448:13)
+2015-07-24T13:15:05.372415+00:00 app[web.1]:     at Async._drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:133:10)
+2015-07-24T13:15:05.369963+00:00 app[web.1]: Executing (default): SELECT "id", "pregunta", "respuesta", "createdAt", "updatedAt" FROM "Quizzes" AS "Quiz" WHERE pregunta like '%';
+2015-07-24T13:15:35.353080+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/quizes" host=quizdmr.herokuapp.com request_id=4a0caa4d-abc1-4e1f-a037-fd8d2c727d0d fwd="83.37.111.98" dyno=web.1 connect=1ms service=30001ms status=503 bytes=0
+2015-07-24T13:15:35.353904+00:00 app[web.1]: [0mGET /quizes [32m- [0m- ms - -[0m
+2015-07-24T13:23:43.140448+00:00 heroku[router]: at=info method=GET path="/" host=quizdmr.herokuapp.com request_id=d181212d-ff11-46ab-9e0b-04b93024ac2d fwd="83.37.111.98" dyno=web.1 connect=2ms service=3ms status=304 bytes=144
+2015-07-24T13:23:43.138950+00:00 app[web.1]: [0mGET / [36m304 [0m1.305 ms - -[0m
+2015-07-24T13:23:43.298561+00:00 heroku[router]: at=info method=GET path="/stylesheets/smartphone.css" host=quizdmr.herokuapp.com request_id=e157388c-c457-4b16-bae5-e48e395856bd fwd="83.37.111.98" dyno=web.1 connect=1ms service=11ms status=304 bytes=233
+2015-07-24T13:23:43.286113+00:00 app[web.1]: [0mGET /stylesheets/smartphone.css [36m304 [0m1.158 ms - -[0m
+2015-07-24T13:23:45.503232+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=quizdmr.herokuapp.com request_id=3396f824-7de2-4e4d-8fb2-eb37875f757c fwd="83.37.111.98" dyno=web.1 connect=2217ms service=5ms status=304 bytes=234
+2015-07-24T13:23:45.498259+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m0.914 ms - -[0m
+2015-07-24T13:23:46.830893+00:00 app[web.1]: Executing (default): SELECT "id", "pregunta", "respuesta", "createdAt", "updatedAt" FROM "Quizzes" AS "Quiz" WHERE pregunta like '%';
+2015-07-24T13:23:46.818315+00:00 app[web.1]: req.query.search: undefined
+2015-07-24T13:23:46.834974+00:00 app[web.1]: Unhandled rejection ReferenceError: next is not defined
+2015-07-24T13:23:46.834977+00:00 app[web.1]:     at null.<anonymous> (/app/controllers/quiz_controller.js:107:29)
+2015-07-24T13:23:46.834979+00:00 app[web.1]:     at tryCatcher (/app/node_modules/sequelize/node_modules/bluebird/js/main/util.js:26:23)
+2015-07-24T13:23:46.834981+00:00 app[web.1]:     at Promise._settlePromiseFromHandler (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:489:31)
+2015-07-24T13:23:46.834983+00:00 app[web.1]:     at Promise._settlePromiseAt (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:565:18)
+2015-07-24T13:23:46.834985+00:00 app[web.1]:     at Promise._settlePromises (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:681:14)
+2015-07-24T13:23:46.834987+00:00 app[web.1]:     at Async._drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:133:10)
+2015-07-24T13:23:46.834986+00:00 app[web.1]:     at Async._drainQueue (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:123:16)
+2015-07-24T13:23:46.834989+00:00 app[web.1]:     at Async.drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:15:14)
+2015-07-24T13:23:46.834991+00:00 app[web.1]:     at process._tickCallback (node.js:448:13)
+2015-07-24T13:24:16.817157+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/quizes" host=quizdmr.herokuapp.com request_id=7200bbba-c98c-4a3f-9909-3eec1bfb03f1 fwd="83.37.111.98" dyno=web.1 connect=2ms service=30001ms status=503 bytes=0
+2015-07-24T13:24:16.819170+00:00 app[web.1]: [0mGET /quizes [32m- [0m- ms - -[0m
+2015-07-24T13:31:40.065830+00:00 heroku[router]: at=info method=GET path="/" host=quizdmr.herokuapp.com request_id=f8fb9547-d08a-4472-8c30-48c2ecbe2744 fwd="83.37.111.98" dyno=web.1 connect=0ms service=4ms status=200 bytes=1504
+2015-07-24T13:31:40.233430+00:00 heroku[router]: at=info method=GET path="/stylesheets/smartphone.css" host=quizdmr.herokuapp.com request_id=ec21c76f-035b-4811-825d-6f63ca72e84d fwd="83.37.111.98" dyno=web.1 connect=2ms service=3ms status=200 bytes=512
+2015-07-24T13:31:40.065804+00:00 app[web.1]: [0mGET / [32m200 [0m2.425 ms - 1308[0m
+2015-07-24T13:31:40.234080+00:00 app[web.1]: [0mGET /stylesheets/smartphone.css [32m200 [0m0.964 ms - 229[0m
+2015-07-24T13:31:40.235341+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=quizdmr.herokuapp.com request_id=ce38992e-2df7-4150-acb4-0bf05b671363 fwd="83.37.111.98" dyno=web.1 connect=2ms service=7ms status=200 bytes=712
+2015-07-24T13:31:40.229998+00:00 app[web.1]: [0mGET /stylesheets/style.css [32m200 [0m1.468 ms - 428[0m
+2015-07-24T13:31:49.753473+00:00 app[web.1]:     at Promise._settlePromises (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:681:14)
+2015-07-24T13:31:49.733661+00:00 app[web.1]: req.query.search: undefined
+2015-07-24T13:31:49.753468+00:00 app[web.1]:     at Promise._settlePromiseFromHandler (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:489:31)
+2015-07-24T13:31:49.753477+00:00 app[web.1]:     at Async._drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:133:10)
+2015-07-24T13:31:49.753432+00:00 app[web.1]: Unhandled rejection ReferenceError: next is not defined
+2015-07-24T13:31:49.753471+00:00 app[web.1]:     at Promise._settlePromiseAt (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:565:18)
+2015-07-24T13:31:49.753481+00:00 app[web.1]:     at process._tickCallback (node.js:448:13)
+2015-07-24T13:31:49.753438+00:00 app[web.1]:     at tryCatcher (/app/node_modules/sequelize/node_modules/bluebird/js/main/util.js:26:23)
+2015-07-24T13:31:49.753436+00:00 app[web.1]:     at null.<anonymous> (/app/controllers/quiz_controller.js:107:29)
+2015-07-24T13:31:49.753475+00:00 app[web.1]:     at Async._drainQueue (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:123:16)
+2015-07-24T13:31:49.753479+00:00 app[web.1]:     at Async.drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:15:14)
+2015-07-24T13:31:49.750785+00:00 app[web.1]: Executing (default): SELECT "id", "pregunta", "respuesta", "createdAt", "updatedAt" FROM "Quizzes" AS "Quiz" WHERE pregunta like '%';
+2015-07-24T13:31:56.112715+00:00 app[web.1]: req.query.search: undefined
+2015-07-24T13:31:56.117076+00:00 app[web.1]: Unhandled rejection ReferenceError: next is not defined
+2015-07-24T13:31:56.117080+00:00 app[web.1]:     at null.<anonymous> (/app/controllers/quiz_controller.js:107:29)
+2015-07-24T13:31:56.117081+00:00 app[web.1]:     at tryCatcher (/app/node_modules/sequelize/node_modules/bluebird/js/main/util.js:26:23)
+2015-07-24T13:31:56.117083+00:00 app[web.1]:     at Promise._settlePromiseFromHandler (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:489:31)
+2015-07-24T13:31:56.117085+00:00 app[web.1]:     at Promise._settlePromiseAt (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:565:18)
+2015-07-24T13:31:56.113447+00:00 app[web.1]: Executing (default): SELECT "id", "pregunta", "respuesta", "createdAt", "updatedAt" FROM "Quizzes" AS "Quiz" WHERE pregunta like '%';
+2015-07-24T13:31:56.117087+00:00 app[web.1]:     at Promise._settlePromises (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:681:14)
+2015-07-24T13:31:56.117088+00:00 app[web.1]:     at Async._drainQueue (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:123:16)
+2015-07-24T13:31:56.117090+00:00 app[web.1]:     at Async._drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:133:10)
+2015-07-24T13:31:56.117091+00:00 app[web.1]:     at Async.drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:15:14)
+2015-07-24T13:31:56.117093+00:00 app[web.1]:     at process._tickCallback (node.js:448:13)
+2015-07-24T13:32:19.743469+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/quizes" host=quizdmr.herokuapp.com request_id=a23363ef-8555-471e-aa2a-f60c61f975cf fwd="83.37.111.98" dyno=web.1 connect=1ms service=30012ms status=503 bytes=0
+2015-07-24T13:32:19.753581+00:00 app[web.1]: [0mGET /quizes [32m- [0m- ms - -[0m
+2015-07-24T13:32:26.112921+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/quizes" host=quizdmr.herokuapp.com request_id=0b8d78c7-fbee-45de-90d8-6030e5c7bea8 fwd="83.37.111.98" dyno=web.1 connect=4ms service=30002ms status=503 bytes=0
+2015-07-24T13:32:26.117763+00:00 app[web.1]: [0mGET /quizes [32m- [0m- ms - -[0m
+2015-07-24T13:43:30.544432+00:00 heroku[router]: at=info method=GET path="/" host=quizdmr.herokuapp.com request_id=7fd83d9b-2841-4043-951e-33dfd06a3244 fwd="83.37.111.98" dyno=web.1 connect=1ms service=6ms status=304 bytes=144
+2015-07-24T13:43:30.708965+00:00 heroku[router]: at=info method=GET path="/stylesheets/smartphone.css" host=quizdmr.herokuapp.com request_id=076a7b55-4302-4c3e-80ea-aad85b4beb46 fwd="83.37.111.98" dyno=web.1 connect=3ms service=4ms status=304 bytes=233
+2015-07-24T13:43:30.550243+00:00 app[web.1]: [0mGET / [36m304 [0m4.380 ms - -[0m
+2015-07-24T13:43:30.707610+00:00 app[web.1]: [0mGET /stylesheets/smartphone.css [36m304 [0m1.612 ms - -[0m
+2015-07-24T13:43:30.696373+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=quizdmr.herokuapp.com request_id=ebda88f6-3a59-41d3-a646-4ff713a1c042 fwd="83.37.111.98" dyno=web.1 connect=1ms service=3ms status=304 bytes=234
+2015-07-24T13:43:30.698411+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m1.218 ms - -[0m
+2015-07-24T13:43:32.039482+00:00 app[web.1]: req.query.search: undefined
+2015-07-24T13:43:32.057118+00:00 app[web.1]: Unhandled rejection ReferenceError: next is not defined
+2015-07-24T13:43:32.057123+00:00 app[web.1]:     at tryCatcher (/app/node_modules/sequelize/node_modules/bluebird/js/main/util.js:26:23)
+2015-07-24T13:43:32.057125+00:00 app[web.1]:     at Promise._settlePromiseFromHandler (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:489:31)
+2015-07-24T13:43:32.057127+00:00 app[web.1]:     at Promise._settlePromiseAt (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:565:18)
+2015-07-24T13:43:32.057122+00:00 app[web.1]:     at null.<anonymous> (/app/controllers/quiz_controller.js:107:29)
+2015-07-24T13:43:32.057129+00:00 app[web.1]:     at Promise._settlePromises (/app/node_modules/sequelize/node_modules/bluebird/js/main/promise.js:681:14)
+2015-07-24T13:43:32.057131+00:00 app[web.1]:     at Async._drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:133:10)
+2015-07-24T13:43:32.057133+00:00 app[web.1]:     at Async.drainQueues (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:15:14)
+2015-07-24T13:43:32.057130+00:00 app[web.1]:     at Async._drainQueue (/app/node_modules/sequelize/node_modules/bluebird/js/main/async.js:123:16)
+2015-07-24T13:43:32.057136+00:00 app[web.1]:     at process._tickCallback (node.js:448:13)
+2015-07-24T13:43:32.053501+00:00 app[web.1]: Executing (default): SELECT "id", "pregunta", "respuesta", "createdAt", "updatedAt" FROM "Quizzes" AS "Quiz" WHERE pregunta like '%';
+2015-07-24T13:44:02.037849+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/quizes" host=quizdmr.herokuapp.com request_id=ea290bac-277c-47c3-9556-420d0dc7331f fwd="83.37.111.98" dyno=web.1 connect=0ms service=30005ms status=503 bytes=0
+2015-07-24T13:44:02.046469+00:00 app[web.1]: [0mGET /quizes [32m- [0m- ms - -[0m
