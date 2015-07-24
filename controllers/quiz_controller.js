@@ -88,9 +88,23 @@ exports.load = function(req, res, next, quizId){
 
 //GET /quizes
 exports.index = function(req, res){
+	
+	console.log('req.query.search: ' + req.params.search);
+	/*
 	models.Quiz.findAll().then(function(quizes){
 		res.render('quizes/index.ejs',{quizes: quizes});
 	}).catch(function(error){next(error);});
+*/
+//Recogemos la busqueda enviada en la petición
+	var busqueda = req.query.search || "";
+	//Reemplazamos los espacios por el comidos
+	busqueda = busqueda.replace(/ /g,"%");
+	//Añadimos los comodines al inicio y final
+	busqueda = "%"+busqueda+"%";
+
+	models.Quiz.findAll({where: ["pregunta like ?", busqueda]}).then(function(quizes) {
+		res.render("quizes/index", {quizes:quizes, errors: []});
+	}).catch(function(error) { next(error);});
 };
 
 
