@@ -76,11 +76,6 @@ sequelize.sync().then(function(){
 				tema: 'Ocio'
 			});
 			Quiz.create({
-				pregunta: 'Capital de Alemania',
-				respuesta: 'Berlin',
-				tema: 'Ocio'
-			});
-			Quiz.create({
 				pregunta: 'Nº planetas del sistema solar',
 				respuesta: '8',
 				tema: 'Ciencia'
