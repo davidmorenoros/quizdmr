@@ -31,7 +31,7 @@ var sequelize = new Sequelize(DB_name, user, pwd,
 							 protocol:protocol, 
 							 port:port,
 							 host:host,
-							 //storage:storage, // Sólo SQLite .env
+							 storage:storage, // Sólo SQLite .env
 							 omitNULL:true		// Sólo Postgres
 							}
 					);
@@ -43,25 +43,18 @@ var Quiz = sequelize.import(path.join(__dirname,'quiz'));
 var quiz_path = path.join(__dirname,'quiz');
 var Quiz = sequelize.import(quiz_path);
 
+// Importar la definición de la tabla Comentarios en BBDD
+var comment_path = path.join(__dirname,'comment');
+var Comment = sequelize.import(comment_path);
+
+// Definición de la relación entre tablas... (belongsTo....belongsToMany -- hasOne ....hasMany)
+Comment.belongsTo(Quiz);	// Un comentario pertenece a una pregunta - definimos la relación (Quiz es el principal)
+Quiz.hasMany(Comment);	// Una pregunta puede tener muchos comentarios - definimos la relación
+
+// Exportar tablas
 exports.Quiz = Quiz;  // exportar definición de tabla Quiz
+exports.Comment = Comment; // Exportar tabla Comment
 
-/*
-// sequelize.sync() crea e inicializa tabla de preguntas en DB
-sequelize.sync().success(function(){
-//success(..) ejecuta el manejador una vez creada la tabla
-	Quiz.count().success(function(){
-		if(count === 0){ // La tabla se inicializa solo si está vacía
-			Quiz.create({
-				pregunta: 'Capital de Italia',
-				respuesta: 'Roma'
-			})
-			.success(function(){console.log('Base de datos inicializada')});
-
-		};
-	});
-
-});
-*/
 // sequelize.sync() crea e inicializa tabla de preguntas en DB
 sequelize.sync().then(function(){
 //then(..) ejecuta el manejador una vez creada la tabla
@@ -100,11 +93,3 @@ sequelize.sync().then(function(){
 });
 
 
-// Creación Tabla Comentarios
-var comment_path = path.join(__dirname,'comment');
-var Comment = sequelize.import(comment_path);
-
-Comment.belongsTo(Quiz);	// Un comentario pertenece a una pregunta - definimos la relación (Quiz es el principal)
-Quiz.hasMany(Comment);	// Una pregunta puede tener muchos comentarios - definimos la relación
-
-exports.Comment = Comment; // Exportar tabla Comment

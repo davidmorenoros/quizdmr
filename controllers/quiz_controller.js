@@ -73,31 +73,22 @@ exports.answer = function(req, res){
 var models = require('../models/models.js');
 
 //Autoload - factoriza el codigo si ruta incluye :quizId
-exports.load = function(req, res, next, quizId){
-	/*models.Quiz.findById(quizId).then(
-		function(quiz){
-			if(quiz){
-				req.quiz = quiz;
-				next();
-			} else{
-				next( new Error('No existe quizID=' + quizId));
-			}
-		}
-		).catch(function(error){ next(error);});
-*/
-	models.Quiz.find({
-			where: {id: Number(quizId) },
-			include: [{ model: models.Comment }]
-		})
-		.then(function(quiz){
-			if(quiz){
-				req.quiz = quiz;
-				next();
-			} else{
-					next( new Error('No existe quizId=' + quizId));
-			}
-		}
-		).catch(function(error){ next(error);});
+// Autoload :id
+exports.load = function(req, res, next, quizId) {
+  models.Quiz.find({
+            where: {
+                id: Number(quizId)
+            },
+            include: [{
+                model: models.Comment
+            }]
+        }).then(function(quiz) {
+      if (quiz) {
+        req.quiz = quiz;
+        next();
+      } else{next(new Error('No existe quizId=' + quizId))}
+    }
+  ).catch(function(error){next(error)});
 };
 
 //GET /quizes
@@ -119,11 +110,12 @@ exports.index = function(req, res){
 //GET /quizes/:id
 exports.show = function(req, res){
 	//console.log('entra en el controller de quiz en preguntas');
-	//console.log('req.params.quizId: ' + req.params.quizId);	
+	console.log('req.params.comment: ' + req.params.comment);	
 	models.Quiz.findById(req.params.quizId).then(function(quiz){
 		res.render('quizes/show', {quiz: req.quiz, errors: []});
 	})
 };
+
 
 //GET /quizes/:id/answer
 exports.answer = function(req, res){
