@@ -98,3 +98,13 @@ sequelize.sync().then(function(){
 	});
 
 });
+
+
+// Creación Tabla Comentarios
+var comment_path = path.join(__dirname,'comment');
+var Comment = sequelize.import(comment_path);
+
+Comment.belongsTo(Quiz);	// Un comentario pertenece a una pregunta - definimos la relación (Quiz es el principal)
+Quiz.hasMany(Comment);	// Una pregunta puede tener muchos comentarios - definimos la relación
+
+exports.Comment = Comment; // Exportar tabla Comment
