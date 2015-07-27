@@ -88,7 +88,7 @@ sequelize.sync().then(function(){
 				tema: 'Ocio'
 			});
 			Quiz.create({
-				pregunta: 'Nº de planetas del sistema solar',
+				pregunta: 'Nº planetas del sistema solar',
 				respuesta: '8',
 				tema: 'Ciencia'
 			})
