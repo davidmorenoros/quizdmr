@@ -1,11 +1,35 @@
+<fieldset>
 <table>
-<% var i; for(i=0; i < quizes.length; i++){ %>
-	<p><tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr></p>
+
+<tr>
+			<th>Pregunta</th>
+			<th>Tema</th>
+			<th colspan="2"></th>
+</tr>
+
+<% var tema = {otro: "Otro", humanidades: "Humanidades", ocio: "Ocio", ciencia: "Ciencia", tecnologia: "Tecnología"};
+var i; for(i=0; i < quizes.length; i++){ %>
+	<p><tr>
+		<td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td>
+		<td><%= quizes[i].tema %></td>
+		<td><a href="quizes/<%= quizes[i].id %>/edit"><button>editar</button></a></td>
+		<td>
+			<form method='post' action='quizes/<%= quizes[i].id %>?_method=delete'>
+				<button type='submit' onClick='return confirm('Borrar: <%= quizes[i].pregunta %>');'>borrar</button>
+			</form>
+		</td>
+	</tr></p>
 <% } %>
 </table>
+</fieldset>
+<a href='/quizes/new'><button type='button'>Crear Pregunta</button></a>
 
 <form method='get' action="/quizes">
-	Busqueda: 
-	<input type='text' name='search' value='Texto a buscar'/>
-	<input type='submit' value='Enviar'/>
+	<fieldset>
+		<legend>Buscador de preguntas</legend>
+		<input type="text" name="search" maxlength="30" size="30"
+			   placeholder="Introduce el texto de la pregunta a buscar" required/>
+		<input type="submit" value="Enviar" />
+	</fieldset>
 </form>
+
