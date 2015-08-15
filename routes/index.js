@@ -53,6 +53,8 @@ router.get('/login',  sessionController.new);     // formulario login
 router.post('/login', sessionController.create);  // crear sesión
 router.get('/logout', sessionController.destroy); // destruir sesión
 
+//Estadísticas
+router.get("/quizes/statistics", quizController.statistics);
 
 // Credits page.
 router.get('/author', function(req,res){
